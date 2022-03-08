@@ -19,5 +19,5 @@ For FEUP students who are finishing their course looking for a job and for anyon
  - Allow the user to apply to job openings at FEUP
 
 ## Required API's
-- FEUP's Jobs Database ([Bolsa de Emprego](https://sigarra.up.pt/feup/pt/WEB_BASE.GERA_PAGINA?P_pagina=19498))
-- FEUP Internal Jobs Database ( [Processos de Recrutamento](https://sigarra.up.pt/feup/pt/cnt_cand_geral.concursos_list))
+- FEUP's Jobs ([Bolsa de Emprego](https://sigarra.up.pt/feup/pt/WEB_BASE.GERA_PAGINA?P_pagina=19498))
+- FEUP Internal Jobs ( [Processos de Recrutamento](https://sigarra.up.pt/feup/pt/cnt_cand_geral.concursos_list))
