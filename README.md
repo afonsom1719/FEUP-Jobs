@@ -2,8 +2,9 @@
 
 ## Members
 
-Student Name - Student number
-...
+|Name|Student Number| Email|
+|----|--------------| -----|
+|Miguel Lopes| up201704590| up201704590@fe.up.pt|
 
 # FEUP Jobs
 
