@@ -5,6 +5,10 @@
 |Name|Student Number| Email|
 |----|--------------| -----|
 |Miguel Lopes| up201704590| up201704590@fe.up.pt|
+|Domingos Santos| up201906680| up201906680@fe.up.pt|
+|Afonso Martins| up202005900| up202005900@fe.up.pt|
+|Eduardo Silva| up202005283| up202005283@fe.up.pt|
+|José Diogo| up202003529| up202003529@fe.up.pt|
 
 # FEUP Jobs
 
