@@ -45,8 +45,5 @@ For FEUP students who are finishing their course looking for a job and for anyon
 |**Description**| The user can filter job posts based on a variety of parameters that can be customized to suit their needs|
 |**Preconditions**| Be able to access the job listings|
 |**Postconditions**| The app displays a page with the job listings that are of the user's interest |
-|**Normal flow** |1. The user acesses the app page that contains the job listings
-2. The app shows all the listings that are available
-3. The user selects the type of filter and the consitions to use
-4. The system reloads and displays only the listings that match the criteria of the user|
+|**Normal flow** |1. The user acesses the app page that contains the job listings 2. The app shows all the listings that are available 3. The user selects the type of filter and the consitions to use 4. The system reloads and displays only the listings that match the criteria of the user|
 |**Alternative flows and exceptions**| If no job listings match the criteria specified by the filters, a warning message is displayed |
