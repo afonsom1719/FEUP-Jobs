@@ -26,3 +26,13 @@ For FEUP students who are finishing their course looking for a job and for anyon
 ## Required API's
 - FEUP's Jobs ([Bolsa de Emprego](https://sigarra.up.pt/feup/pt/WEB_BASE.GERA_PAGINA?P_pagina=19498))
 - FEUP Internal Jobs ( [Processos de Recrutamento](https://sigarra.up.pt/feup/pt/cnt_cand_geral.concursos_list))
+
+## Use Case Documentation
+
+|Name|See job listings on FEUP's job bank|
+|Actor|Student|
+|Description|FEUP students might choose to see an extended list of jobs outside of FEUP to which they can apply|
+|Preconditions|-The student must have a valid identification as well as a working password on Sigarra|
+|Postconditions|-The actor is able to scroll throught the jobs bank listing -The student gets access to another use case related to contacting the employer - The student becomes allowed to see job details|
+|Normal Flow|--------------|
+|Alternative Flows and Exceptions|--------------|
