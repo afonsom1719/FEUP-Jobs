@@ -35,5 +35,9 @@ For FEUP students who are finishing their course looking for a job and for anyon
 |**Description**|FEUP's authenticated users might choose to see an extended list of jobs outside of FEUP to which they can apply|
 |**Preconditions**|- The authenticated user must have a valid identification as well as a working password on Sigarra|
 |**Postconditions**|- The actor is able to scroll throught the jobs bank listing - The authenticated user gets access to another use case related to contacting the employer -  The authenticated user becomes allowed to see job details|
-|**Normal Flow**|1. The authenticated user logs into the app with FEUP's credentials 2. Opens the menu 3. Selects the jobs listing option 4. The system shows the jobs bank 5. Further actions can be taken from there|
+|**Normal Flow**|1. The authenticated user logs into the app with FEUP's credentials 
+2. Opens the menu 
+3. Selects the jobs listing option 
+4. The system shows the jobs bank
+5. Further actions can be taken from there|
 |**Alternative Flows and Exceptions**|1. The user is not authenticated and can see the listing but not interact with it|
