@@ -37,3 +37,16 @@ For FEUP students who are finishing their course looking for a job and for anyon
 |**Postconditions**|- The actor is able to scroll throught the jobs bank listing - The authenticated user gets access to another use case related to contacting the employer -  The authenticated user becomes allowed to see job details|
 |**Normal Flow**|1. The authenticated user logs into the app with FEUP's credentials 2.Opens the menu 3.Selects the jobs listing option 4.The system shows the jobs bank 5.Further actions can be taken from there|
 |**Alternative Flows and Exceptions**|1. The user is not authenticated and can see the listing but not interact with it|
+
+||||
+|----|--------------| -----|
+|**Name**|Filter through job listing by certain criteria|
+|**Actors**| Authenticated User, Regular User|
+|**Description**| The user can filter job posts based on a variety of parameters that can be customized to suit their needs|
+|**Preconditions**| Be able to access the job listings|
+|**Postconditions**| The app displays a page with the job listings that are of the user's interest |
+|**Normal flow** |1. The user acesses the app page that contains the job listings
+2. The app shows all the listings that are available
+3. The user selects the type of filter and the consitions to use
+4. The system reloads and displays only the listings that match the criteria of the user|
+|**Alternative flows and exceptions**| If no job listings match the criteria specified by the filters, a warning message is displayed |
