@@ -17,7 +17,7 @@
 For FEUP students who are finishing their course looking for a job and for anyone looking for a job at FEUP. FEUP Jobs is an app that allows the user to interact with FEUP's job database. Unlike SIGARRA, our product will have a pleasing UI that also contributes towards improving the user experience.
 
 ## Main Features
- - List all the jobs posted at FEUP's job base
+ - Display all the jobs posted at FEUP's job base
  - Contact button that allows users to contact the company that posted the job
  - Filter through job listings (by area of expertise, contract duration,...)
  - List all the openings to work at FEUP
