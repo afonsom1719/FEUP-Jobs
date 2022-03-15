@@ -28,7 +28,7 @@ For FEUP students who are finishing their course looking for a job and for anyon
 - FEUP Internal Jobs ( [Processos de Recrutamento](https://sigarra.up.pt/feup/pt/cnt_cand_geral.concursos_list))
 
 ## Use Case Documentation
-
+||||
 |----|-----| -----|
 |Name|See job listings on FEUP's job bank|
 |Actor|Student|
