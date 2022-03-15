@@ -29,6 +29,8 @@ For FEUP students who are finishing their course looking for a job and for anyon
 
 ## Use Case Documentation
 
+| | | |
+|----|-----| -----|
 |Name|See job listings on FEUP's job bank|
 |Actor|Student|
 |Description|FEUP students might choose to see an extended list of jobs outside of FEUP to which they can apply|
