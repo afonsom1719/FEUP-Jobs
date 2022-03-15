@@ -31,8 +31,10 @@ For FEUP students who are finishing their course looking for a job and for anyon
 
 ## Use Case Documentation
 
-| Use Case 1                           |                                                                                                                                                                                                                              |
-| :----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+![Diagram](Media/case_diagram.png)
+
+| **Use Case**                         | **1**                                                                                                                                                                                                                        |
+| :----------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                             | See job listings on FEUP's job bank                                                                                                                                                                                          |
 | **Actor**                            | Authenticated user                                                                                                                                                                                                           |
 | **Description**                      | FEUP's authenticated users might choose to see an extended list of jobs outside of FEUP to which they can apply                                                                                                              |
@@ -42,7 +44,7 @@ For FEUP students who are finishing their course looking for a job and for anyon
 | **Alternative Flows and Exceptions** | 1. The user is not authenticated and can see the listing but not interact with it                                                                                                                                            |
 
 | Use Case 2                           |                                                                                                                                                                                                                                                                                               |
-| :----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :----------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                             | Filter through job listing by certain criteria                                                                                                                                                                                                                                                |
 | **Actors**                           | Authenticated User, Regular User                                                                                                                                                                                                                                                              |
 | **Description**                      | The user can filter job posts based on a variety of parameters that can be customized to suit their needs                                                                                                                                                                                     |
