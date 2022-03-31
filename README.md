@@ -103,3 +103,8 @@ For FEUP students who are finishing their course looking for a job and for anyon
 | **Postconditions**                   | - The app displays a form to be filled by the user                                                                                                                                                                                                                           |
 | **Normal flow**                      | 1. The user accesses the app page that contains the job full listing <br> 2. The app shows all the details for that available job at FEUP <br> 3. The user selects the "apply" option <br> 4. An application form is displayed <br> 5. User fills the form <br> 6. User submits that form |
 | **Alternative flows and exceptions** | 1. If the user is not authenticated, he is redirected to either the login page, or a temporary account register form<br> 2. If there is any blank content on the application form, an alert message will be displayed | 
+
+
+## Domain Model
+
+![Domain Model](Media/domain_model.png)
