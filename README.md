@@ -17,7 +17,7 @@
 For FEUP students who are finishing their course looking for a job and for anyone looking for a job at FEUP. FEUP Jobs is an app that allows the user to interact with FEUP's job bank. Unlike SIGARRA, our product will have a pleasing UI that also contributes towards improving the user experience.
 
 ## Main Features
-
+er, I want to be able to filter through the jobs at FEUP's job bank, so I can find th
 - Display all the jobs posted at FEUP's job bank
 - Contact button that allows users to contact the company that posted the job
 - Filter through job listings (by area of expertise, contract duration,...)
@@ -30,6 +30,12 @@ For FEUP students who are finishing their course looking for a job and for anyon
 - FEUP Internal Jobs ( [Processos de Recrutamento](https://sigarra.up.pt/feup/pt/cnt_cand_geral.concursos_list))
 
 ## Use Case Documentation
+
+It should be noted that the app will have 2 types of job listings, which we will distinguish throughout this report:
+
+- Jobs posted by companies at FEUP's job bank
+- Job openings for people who want to work at FEUP
+
 
 ![Diagram](Media/case_diagram.png)
 
