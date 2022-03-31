@@ -33,8 +33,8 @@ er, I want to be able to filter through the jobs at FEUP's job bank, so I can fi
 
 It should be noted that the app will have 2 types of job listings, which we will distinguish throughout this report:
 
-- Jobs posted by companies at FEUP's job bank
-- Job openings for people who want to work at FEUP
+- Jobs posted by companies at FEUP's job bank - available only to Authenticated Users
+- Job openings for people who want to work at FEUP - available to Regular Users
 
 
 ![Diagram](Media/case_diagram.png)
