@@ -113,3 +113,12 @@ It should be noted that the app will have 2 types of job listings, which we will
 ## Domain Model
 
 ![Domain Model](Media/domain_model.png)
+
+## Physical View
+
+![Physical View](Media/physical_view.png)
+
+## Logical View
+
+![Logical View](Media/logical_view.png)
+
