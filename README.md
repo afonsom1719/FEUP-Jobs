@@ -120,5 +120,7 @@ It should be noted that the app will have 2 types of job listings, which we will
 
 ## Logical View
 
+For this project, there is no need for a server machine since our app works as an interface, providing the user with the possibility of interactig with all job related functionalities available at FEUP's Sigarra, directly from their smartphone. Also, this happens because of the simplicity of this project, all business logic will run on the user's phone.
+
 ![Logical View](Media/logical_view.png)
 
