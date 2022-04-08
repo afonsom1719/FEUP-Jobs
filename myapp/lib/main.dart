@@ -35,35 +35,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
-
     final blurBorder = BoxDecoration(
-      borderRadius: BorderRadius.circular(8),
-      border:
-      Border.all(width: 1.5, color: const Color.fromARGB(255, 238, 241, 246)));
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+            width: 1.5, color: const Color.fromARGB(255, 238, 241, 246)));
 
-      final focusedBorder = BoxDecoration(
-      borderRadius: BorderRadius.circular(8),
-      gradient: const LinearGradient(
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          colors: [
-            Color.fromARGB(255, 141, 56, 211),
-            Color.fromARGB(255, 156, 90, 209),
-            Color.fromARGB(255, 93, 53, 213),
-          ],
-          stops: [
-            0.0,
-            0.5,
-            0.7
-          ]));
+    final focusedBorder = BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        gradient: const LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            colors: [
+              Color.fromARGB(255, 141, 56, 211),
+              Color.fromARGB(255, 156, 90, 209),
+              Color.fromARGB(255, 93, 53, 213),
+            ],
+            stops: [
+              0.0,
+              0.5,
+              0.7
+            ]));
 
-      bool isFocused = false;
+    bool isFocused = false;
 
     return Padding(
-
-        
-
-          
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget>[
@@ -77,7 +72,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       fontWeight: FontWeight.w500,
                       fontSize: 50),
                 )),
-                
             Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(10),
@@ -92,25 +86,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   iconColor: Color.fromARGB(255, 169, 47, 26),
                   focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                    color: Color.fromARGB(255, 169, 47, 26),                
+                    color: Color.fromARGB(255, 169, 47, 26),
                   )),
                 ),
               ),
             ),
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 50),
-
+            Container(
               padding: const EdgeInsets.all(10),
               child: TextField(
+                obscureText: true,
                 controller: passwordController,
-                decoration: const InputDecoration(                  
+                decoration: const InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
                   iconColor: Color.fromARGB(255, 169, 47, 26),
                   focusedBorder: OutlineInputBorder(
-                      
                       borderSide: BorderSide(
-                    color: Color.fromARGB(255, 169, 47, 26),  
+                    color: Color.fromARGB(255, 169, 47, 26),
                   )),
                 ),
               ),
