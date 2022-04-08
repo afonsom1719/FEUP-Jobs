@@ -136,3 +136,5 @@ Our app will have the following elements:
 - Links
 - Text boxes
 
+So, for our vertical prototype we implemented the login page, that includes all of the elements listed above.
+
