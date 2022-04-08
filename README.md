@@ -128,5 +128,11 @@ Due to the simplicity of this project, all business logic will run on the user's
 
 ## Vertical Prototype
 
-prints e descriçao dos elementos que fizemos
+![Physical View](Media/screenshots.gif)
+
+
+Our app will have the following elements:
+- Buttons
+- Links
+- Text boxes
 
