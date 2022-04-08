@@ -114,13 +114,19 @@ It should be noted that the app will have 2 types of job listings, which we will
 
 ![Domain Model](Media/domain_model.png)
 
+## Logical View
+
+The app will consist of 2 key layers, the UI through which the user will interact with the app, and the business logic. Since this app acts as an interface between the user and Sigarra, the business logic will be very simple and do mostly form validations amongst other things.
+
+![Logical View](Media/logical_view.png)
+
 ## Physical View
+
+Due to the simplicity of this project, all business logic will run on the user's phone and so, we found no need for a server machine since our app works as an interface, providing the user with the possibility of interacting with all job related functionalities available at FEUP's Sigarra, directly from their smartphone.
 
 ![Physical View](Media/physical_view.png)
 
-## Logical View
+## Vertical Prototype
 
-For this project, there is no need for a server machine since our app works as an interface, providing the user with the possibility of interactig with all job related functionalities available at FEUP's Sigarra, directly from their smartphone. Also, this happens because of the simplicity of this project, all business logic will run on the user's phone.
-
-![Logical View](Media/logical_view.png)
+prints e descriçao dos elementos que fizemos
 
