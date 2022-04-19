@@ -12,14 +12,20 @@ class Listing extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 169, 47, 26),
+          leading: IconButton(
+          icon: Icon(Icons.menu, color: Colors.red), // set your color here
+          onPressed: () {},
+          
+        ),
         ),
         body: const MyStatefulWidget(),
         backgroundColor: Colors.white,
       ),
+
+      
     );
   }
 }
-
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
