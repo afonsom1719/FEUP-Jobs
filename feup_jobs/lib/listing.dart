@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
+import 'Components/NavigationBar.dart';
 
 class Listing extends StatelessWidget {
   const Listing({Key? key}) : super(key: key);
 
-  static const String _title = 'Sample App';
+  static const String _title = 'FEUP Jobs';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 169, 47, 26),
-          leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.red), // set your color here
-          onPressed: () {},
-          
-        ),
-        ),
+        appBar: headerBar(),
         body: const MyStatefulWidget(),
-        backgroundColor: Colors.white,
       ),
-
-      
     );
   }
 }
+
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
 
@@ -34,9 +26,6 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Padding(
