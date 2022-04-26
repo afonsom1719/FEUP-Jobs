@@ -3,17 +3,24 @@ import 'Components/NavigationBar.dart';
 import 'Components/BulletList.dart';
 
 class Listing extends StatelessWidget {
-  const Listing({Key? key}) : super(key: key);
+  Listing({Key? key}) : super(key: key);
 
   static const String _title = 'FEUP Jobs';
 
+  GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: headerBar(),
+        key: _scaffoldkey,
+        appBar: headerBar(_scaffoldkey),
+        drawer: createDrawer(w, h),
         body: const JobListingWidget(),
       ),
     );
