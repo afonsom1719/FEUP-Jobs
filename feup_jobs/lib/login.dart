@@ -4,11 +4,12 @@ import 'listing.dart';
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
-  static const String _title = 'Sample App';
+  static const String _title = 'FEUP Jobs';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
         appBar: AppBar(
@@ -93,13 +94,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             Container(
                 height: 50,
                 color: Colors.orange,
-                padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Listing()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Listing()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
