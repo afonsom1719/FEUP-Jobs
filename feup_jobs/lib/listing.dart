@@ -19,7 +19,7 @@ class Listing extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: headerBar(_scaffoldkey),
+        appBar: CustomAppBar(),
         drawer: createDrawer(w, h),
         body: const JobListingWidget(),
       ),
