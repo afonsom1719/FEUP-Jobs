@@ -1,3 +1,4 @@
+import 'package:feup_jobs/listing.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'package:feup_jobs/filterScreen.dart';
@@ -114,34 +115,7 @@ class _JobBankState extends State<JobBankWidget> {
               height: 20,
             ),
 
-            Container(
-                alignment: Alignment.topLeft,
-                padding: const EdgeInsets.only(left: 5.0, top: 15.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                        _b1t,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                          _b1d,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
-                          )),
-                    )
-                  ],
-                )),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
+            InkWell(
               child: Container(
                   alignment: Alignment.topLeft,
                   padding: const EdgeInsets.only(left: 5.0, top: 15.0),
@@ -149,7 +123,7 @@ class _JobBankState extends State<JobBankWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                          _b2t,
+                          _b1t,
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                             fontFamily: 'Poppins',
@@ -159,7 +133,7 @@ class _JobBankState extends State<JobBankWidget> {
                       Padding(
                         padding: const EdgeInsets.only(top: 10),
                         child: Text(
-                            _b2d,
+                            _b1d,
                             style: const TextStyle(
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w500,
@@ -168,35 +142,77 @@ class _JobBankState extends State<JobBankWidget> {
                       )
                     ],
                   )),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Listing()));},
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10),
-              child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.only(left: 5.0, top: 15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                          _b3t,
-                          textAlign: TextAlign.left,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18,
-                          )),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                            _b3d,
+              child: InkWell(
+                child: Container(
+                    alignment: Alignment.topLeft,
+                    padding: const EdgeInsets.only(left: 5.0, top: 15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            _b2t,
+                            textAlign: TextAlign.left,
                             style: const TextStyle(
                               fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
                             )),
-                      )
-                    ],
-                  )),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                              _b2d,
+                              style: const TextStyle(
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              )),
+                        )
+                      ],
+                    )),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Listing()));},
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: InkWell(
+                child: Container(
+                    alignment: Alignment.topLeft,
+                    padding: const EdgeInsets.only(left: 5.0, top: 15.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            _b3t,
+                            textAlign: TextAlign.left,
+                            style: const TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 18,
+                            )),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                              _b3d,
+                              style: const TextStyle(
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                              )),
+                        )
+                      ],
+                    )),
+                              onTap: () {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => Listing()));},
+              ),
             ),
 
           ])),
