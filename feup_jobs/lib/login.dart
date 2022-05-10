@@ -1,5 +1,6 @@
 import 'package:feup_jobs/register.dart';
 import 'package:flutter/material.dart';
+import 'Components/NavigationBar.dart';
 import 'listing.dart';
 
 class Login extends StatelessWidget {
@@ -9,14 +10,13 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 169, 47, 26),
-        ),
-        body: const MyStatefulWidget(),
+        appBar: CustomAppBar(),
+        body: MyStatefulWidget(),
+        drawer: CustomDrawer(),
         backgroundColor: Colors.white,
       ),
     );
@@ -118,8 +118,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const Register()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Register()));
                   },
                 )
               ],

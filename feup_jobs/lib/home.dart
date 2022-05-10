@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
       title: _title,
       home: Scaffold(
         appBar: CustomAppBar(),
+        drawer: CustomDrawer(),
         body: HomeOptionsWidget(),
       ),
     );

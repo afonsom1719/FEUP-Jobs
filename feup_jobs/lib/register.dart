@@ -1,5 +1,6 @@
 import 'package:feup_jobs/login.dart';
 import 'package:flutter/material.dart';
+import 'Components/NavigationBar.dart';
 import 'listing.dart';
 
 class Register extends StatelessWidget {
@@ -16,6 +17,7 @@ class Register extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 169, 47, 26),
         ),
+        drawer: CustomDrawer(),
         body: const MyStatefulWidget(),
         backgroundColor: Colors.white,
       ),
