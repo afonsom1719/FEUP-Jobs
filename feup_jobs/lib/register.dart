@@ -105,6 +105,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           Container(
             padding: const EdgeInsets.all(10),
             child: TextField(
+              obscureText: true,
               controller: passwordCheckController,
               decoration: const InputDecoration(
                 labelText: 'Confirm Password',
