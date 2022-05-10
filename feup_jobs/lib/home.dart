@@ -1,3 +1,4 @@
+import 'package:feup_jobs/jobBank.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'login.dart';
@@ -77,11 +78,11 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Listing()),
+                  MaterialPageRoute(builder: (context) => const Bank()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 169, 47, 26),
+                primary: const Color.fromARGB(255, 169, 47, 26),
               ),
               child: const Text('Continue as guest'),
             ),
