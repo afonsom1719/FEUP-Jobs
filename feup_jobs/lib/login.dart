@@ -1,3 +1,4 @@
+import 'package:feup_jobs/register.dart';
 import 'package:flutter/material.dart';
 import 'listing.dart';
 
@@ -117,7 +118,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                   ),
                   onPressed: () {
-                    //signup screen
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Register()));
                   },
                 )
               ],
