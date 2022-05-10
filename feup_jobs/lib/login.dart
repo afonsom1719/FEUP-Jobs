@@ -1,3 +1,4 @@
+import 'package:feup_jobs/jobBank.dart';
 import 'package:flutter/material.dart';
 import 'listing.dart';
 
