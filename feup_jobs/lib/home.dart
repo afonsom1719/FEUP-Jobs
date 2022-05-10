@@ -10,12 +10,12 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: headerBar(),
-        body: const HomeOptionsWidget(),
+        appBar: CustomAppBar(),
+        body: HomeOptionsWidget(),
       ),
     );
   }
@@ -76,7 +76,7 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Listing()),
+                  MaterialPageRoute(builder: (context) => Listing()),
                 );
               },
               style: ElevatedButton.styleFrom(
