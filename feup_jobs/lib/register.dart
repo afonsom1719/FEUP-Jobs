@@ -1,3 +1,4 @@
+import 'package:feup_jobs/login.dart';
 import 'package:flutter/material.dart';
 import 'listing.dart';
 
@@ -31,98 +32,119 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController passwordCheckController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(10),
-        child: ListView(
-          children: <Widget>[
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'FEUPjobs',
-                  style: TextStyle(
-                      color: Colors.orangeAccent,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 50),
-                )),
-            Container(
+      padding: const EdgeInsets.all(10),
+      child: ListView(
+        children: <Widget>[
+          Container(
               alignment: Alignment.center,
               padding: const EdgeInsets.all(10),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: nameController,
-                decoration: const InputDecoration(
-                  labelText: 'User Name',
-                  labelStyle: TextStyle(color: Colors.orangeAccent),
-                  iconColor: Color.fromARGB(255, 169, 47, 26),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                    color: Color.fromARGB(255, 169, 47, 26),
-                  )),
-                ),
+              child: const Text(
+                'FEUPjobs',
+                style: TextStyle(
+                    color: Colors.orangeAccent,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 50),
+              )),
+          Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.all(10),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: TextField(
+              controller: nameController,
+              decoration: const InputDecoration(
+                labelText: 'User Name',
+                labelStyle: TextStyle(color: Colors.orangeAccent),
+                iconColor: Color.fromARGB(255, 169, 47, 26),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Color.fromARGB(255, 169, 47, 26),
+                )),
               ),
             ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                obscureText: true,
-                controller: passwordController,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: TextStyle(color: Colors.orangeAccent),
-                  iconColor: Color.fromARGB(255, 169, 47, 26),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                    color: Color.fromARGB(255, 169, 47, 26),
-                  )),
-                ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: TextField(
+              controller: emailController,
+              decoration: const InputDecoration(
+                labelText: 'E-mail',
+                labelStyle: TextStyle(color: Colors.orangeAccent),
+                iconColor: Color.fromARGB(255, 169, 47, 26),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Color.fromARGB(255, 169, 47, 26),
+                )),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                //forgot password screen
-              },
-              child: const Text('Forgot Password',
-                  style: TextStyle(color: Colors.orange)),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: TextField(
+              obscureText: true,
+              controller: passwordController,
+              decoration: const InputDecoration(
+                labelText: 'Password',
+                labelStyle: TextStyle(color: Colors.orangeAccent),
+                iconColor: Color.fromARGB(255, 169, 47, 26),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Color.fromARGB(255, 169, 47, 26),
+                )),
+              ),
             ),
-            Container(
-                height: 50,
-                color: Colors.orange,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Listing()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 169, 47, 26),
-                    ),
-                    child: const Text('Login'))),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text('Does not have account?'),
-                TextButton(
-                  child: const Text(
-                    'Sign in',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.orangeAccent,
-                    ),
-                  ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: TextField(
+              controller: passwordCheckController,
+              decoration: const InputDecoration(
+                labelText: 'Confirm Password',
+                labelStyle: TextStyle(color: Colors.orangeAccent),
+                iconColor: Color.fromARGB(255, 169, 47, 26),
+                focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                  color: Color.fromARGB(255, 169, 47, 26),
+                )),
+              ),
+            ),
+          ),
+          Container(
+              height: 50,
+              color: Colors.orange,
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: ElevatedButton(
                   onPressed: () {
-                    //signup screen
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Listing()));
                   },
-                )
-              ],
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 169, 47, 26),
+                  ),
+                  child: const Text('Register'))),
+          TextButton(
+            child: const Text(
+              'Return to Login Screen',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.orangeAccent,
+              ),
             ),
-          ],
-        ));
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Login()));
+            },
+          )
+        ],
+      ),
+    );
   }
 }

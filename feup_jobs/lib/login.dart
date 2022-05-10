@@ -33,7 +33,6 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -73,21 +72,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             Container(
               padding: const EdgeInsets.all(10),
               child: TextField(
-                controller: emailController,
-                decoration: const InputDecoration(
-                  labelText: 'E-mail',
-                  labelStyle: TextStyle(color: Colors.orangeAccent),
-                  iconColor: Color.fromARGB(255, 169, 47, 26),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                    color: Color.fromARGB(255, 169, 47, 26),
-                  )),
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
                 obscureText: true,
                 controller: passwordController,
                 decoration: const InputDecoration(
@@ -101,18 +85,45 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
               ),
             ),
+            TextButton(
+              onPressed: () {
+                //forgot password screen
+              },
+              child: const Text('Forgot Password',
+                  style: TextStyle(color: Colors.orange)),
+            ),
             Container(
                 height: 50,
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
                     onPressed: () {
-                      /* Push New User Information to DB */
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Listing()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
                     ),
-                    child: const Text('Register'))),
+                    child: const Text('Login'))),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const Text('Does not have account?'),
+                TextButton(
+                  child: const Text(
+                    'Sign in',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.orangeAccent,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Register()));
+                  },
+                )
+              ],
+            ),
           ],
         ));
   }
