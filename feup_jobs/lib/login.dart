@@ -1,3 +1,4 @@
+import 'package:feup_jobs/jobBank.dart';
 import 'package:feup_jobs/register.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
@@ -99,7 +100,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Listing()));
+                          MaterialPageRoute(builder: (context) => Bank()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
