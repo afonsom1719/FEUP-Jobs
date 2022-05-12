@@ -10,12 +10,14 @@ class Bank extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
         appBar: CustomAppBar(),
-        body: const JobBankWidget(),
+        drawer: CustomDrawer(),
+
+        body: JobBankWidget(),
       ),
     );
   }
@@ -119,6 +121,7 @@ class _JobBankState extends State<JobBankWidget> {
               height: 20,
             ),
             InkWell(
+              key: Key('firstJobListing'),
               child: Container(
                 alignment: Alignment.topLeft,
                 padding: const EdgeInsets.only(left: 5.0, top: 15.0),

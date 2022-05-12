@@ -47,8 +47,10 @@ class _JobListingState extends State<JobListingWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
+        key:Key("fullJobListing"),
         padding: const EdgeInsets.all(20),
-        child: ListView(children: <Widget>[
+        child: ListView(
+          children: <Widget>[
           Container(
             alignment: Alignment.topLeft,
             child: Text(

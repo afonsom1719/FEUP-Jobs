@@ -46,8 +46,8 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
             padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
             alignment: Alignment.center,
             child: Image.asset(
-              'images/logo.png',
-              height: 280,
+              'assets/images/logo.png',
+              height: 220,
             ),
           ),
           Container(
@@ -65,7 +65,8 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 169, 47, 26),
               ),
-              child: const Text('Login'),
+              key: Key('feupsjobbank'),
+              child: const Text("FEUP's Job Bank"),
             ),
           ),
           const SizedBox(height: 30),
@@ -84,7 +85,8 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               style: ElevatedButton.styleFrom(
                 primary: const Color.fromARGB(255, 169, 47, 26),
               ),
-              child: const Text('Continue as guest'),
+              key: Key('jobsatfeup'),
+              child: const Text('Jobs at FEUP'),
             ),
           ),
         ],

@@ -59,6 +59,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: nameController,
+                key: Key('usernameinput'),
                 decoration: const InputDecoration(
                   labelText: 'User Name',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -75,6 +76,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: TextField(
                 obscureText: true,
                 controller: passwordController,
+                key: Key('passwordinput'),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -98,9 +100,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
+                    key: Key('login'),
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Bank()));
+                      validateLogin();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
@@ -129,5 +131,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
           ],
         ));
+  }
+
+  void validateLogin() {
+    if(nameController.text=="up200012345" && passwordController.text=="1234"){
+      Navigator.push(context,
+      MaterialPageRoute(builder: (context) => Bank()));
+    }
   }
 }
