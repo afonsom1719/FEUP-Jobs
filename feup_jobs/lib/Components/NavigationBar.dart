@@ -3,18 +3,29 @@ import 'package:flutter/material.dart';
 import '../home.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key, GlobalKey<ScaffoldState>? scaffoldkey})
+  const CustomAppBar(
+      {this.searchIcon = false,
+      this.filter = false,
+      Key? key,
+      GlobalKey<ScaffoldState>? scaffoldkey})
       : preferredSize = const Size.fromHeight(kToolbarHeight),
         super(key: key);
 
   @override
   final Size preferredSize;
+  final bool searchIcon;
+  final bool filter;
 
   @override
-  _CustomAppBarState createState() => _CustomAppBarState();
+  _CustomAppBarState createState() => _CustomAppBarState(searchIcon, filter);
 }
 
 class _CustomAppBarState extends State<CustomAppBar> {
+  _CustomAppBarState(this.searchIcon, this.filter);
+
+  final bool searchIcon;
+  final bool filter;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -26,7 +37,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
               Scaffold.of(context).openDrawer();
             });
           }),
-      actions: <Widget>[
+      actions: buttons(),
+      title: titleText(),
+    );
+  }
+
+  List<Widget>? buttons() {
+    if (searchIcon == true) {
+      return <Widget>[
         Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: GestureDetector(
@@ -38,8 +56,43 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 },
               ),
             )),
-      ],
-    );
+      ];
+    }
+    if (filter) {
+      return <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, right: 20.0),
+          child: GestureDetector(
+            onTap: () {},
+            child: ElevatedButton(
+              onPressed: () {
+                //clear filters
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Color.fromARGB(255, 26, 122, 185),
+              ),
+              child: const Text(
+                'RESET FILTERS',
+              ),
+            ),
+          ),
+        ),
+      ];
+    }
+    return null;
+  }
+
+  Widget? titleText() {
+    if (filter) {
+      return const Text(
+        "Set your filter",
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        ),
+      );
+    }
+    return null;
   }
 }
 
@@ -122,7 +175,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
 
           child: ListView(
             // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
+            padding: EdgeInsets.only(top: 24),
             children: [
               Container(
                 alignment: Alignment.center,
