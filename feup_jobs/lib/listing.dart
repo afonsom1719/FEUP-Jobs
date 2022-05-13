@@ -1,3 +1,4 @@
+import 'package:feup_jobs/contactForm.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'Components/BulletList.dart';
@@ -138,10 +139,10 @@ class _JobListingState extends State<JobListingWidget> {
               padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
               child: ElevatedButton(
                   onPressed: () {
-                    /* Navigator.push(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Listing())); */
+                            builder: (context) => const ContactForm()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 169, 47, 26),
