@@ -46,7 +46,7 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
             padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
             alignment: Alignment.center,
             child: Image.asset(
-              'images/logo.png',
+              'assets/images/logo.png',
               height: 280,
             ),
           ),
