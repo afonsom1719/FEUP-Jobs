@@ -14,9 +14,10 @@ class Bank extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: CustomAppBar(),
+        appBar: CustomAppBar(
+          searchIcon: true,
+        ),
         drawer: CustomDrawer(),
-
         body: JobBankWidget(),
       ),
     );
