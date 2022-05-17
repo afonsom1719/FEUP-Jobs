@@ -1,5 +1,6 @@
 import 'package:feup_jobs/jobBank.dart';
 import 'package:feup_jobs/register.dart';
+>>>>>>> deb273691c54b25bd9b039685e668ea27fdcc3f4
 
 import 'package:flutter/material.dart';
 import 'listing.dart';
@@ -103,7 +104,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => BankAuthenticated()));
+                              builder: (context) => Bank()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
