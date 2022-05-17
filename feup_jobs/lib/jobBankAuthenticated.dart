@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'package:feup_jobs/filterScreen.dart';
 import 'jobs.dart';
+import 'dart:convert';
 
-class Bank extends StatelessWidget {
-  const Bank({Key? key}) : super(key: key);
+class BankAuthenticated extends StatelessWidget {
+  const BankAuthenticated({Key? key}) : super(key: key);
 
   static const String _title = 'FEUP Jobs';
 
@@ -29,11 +30,13 @@ class JobBankWidget extends StatefulWidget {
 }
 
 class _JobBankState extends State<JobBankWidget> {
-  List<Job> jobs = createJobs(); // this creates and fills jobs with jobs;
+  List<Job> jobs = []; //createJobs(); // this creates and fills jobs with jobs;
+
   final String _title = 'FEUP\'s Job Bank';
 
   final String _b1t = 'Sr. Cloud Security IS Engineer';
-  final String _b1d = 'Amgen is seeking a Cloud Security Engineer to join Amgen’s Cloud Security organization who will be reporting into the Global Information Protection Organization in Amgen and will be based in Lisbon, PRT, at Amgen’s new Capability Center.';
+  final String _b1d =
+      'Amgen is seeking a Cloud Security Engineer to join Amgen’s Cloud Security organization who will be reporting into the Global Information Protection Organization in Amgen and will be based in Lisbon, PRT, at Amgen’s new Capability Center.';
 
   /*final String _b1t = 'Sr. Cloud Security IS Engineer';
   final String _b1d =
@@ -116,30 +119,31 @@ class _JobBankState extends State<JobBankWidget> {
             SizedBox(
               height: 20,
             ),
-            Container(
-                alignment: Alignment.topLeft,
-                padding: const EdgeInsets.only(left: 5.0, top: 15.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(_b1t,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(_b1d,
+            for (int i = 0; i < jobs.length; i++)
+              Container(
+                  alignment: Alignment.topLeft,
+                  padding: const EdgeInsets.only(left: 5.0, top: 15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(jobs[i].getTitle(),
+                          textAlign: TextAlign.left,
                           style: const TextStyle(
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 18,
                           )),
-                    )
-                  ],
-                )),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(jobs[i].getDescription(),
+                            style: const TextStyle(
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            )),
+                      )
+                    ],
+                  )),
           ])),
     );
   }

@@ -1,4 +1,6 @@
 import 'package:feup_jobs/jobBank.dart';
+import 'package:feup_jobs/jobBankAuthenticated.dart';
+
 import 'package:flutter/material.dart';
 import 'listing.dart';
 
@@ -98,8 +100,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Bank()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BankAuthenticated()));
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),

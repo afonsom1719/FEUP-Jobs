@@ -1,0 +1,13 @@
+{
+ "jobsJSON": [
+    {
+        "id": "0",
+        "title" : "Funcionário de Limpezas",
+        "departm": "Outro",
+        "requirements": "Vontade de Trabalhar",
+        "description" : "Procura- se funcionario de limpezas para feup e aefeup",
+        "extra" : "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
+        "salary" : "700"
+      }
+ ]
+}
