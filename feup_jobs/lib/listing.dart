@@ -1,3 +1,4 @@
+import 'package:feup_jobs/contactForm.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'Components/BulletList.dart';
@@ -11,16 +12,13 @@ class Listing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
-    double h = MediaQuery.of(context).size.height;
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
         appBar: CustomAppBar(),
-        drawer: createDrawer(w, h),
+        drawer: CustomDrawer(),
         body: const JobListingWidget(),
       ),
     );
@@ -50,8 +48,10 @@ class _JobListingState extends State<JobListingWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
+        key:Key("fullJobListing"),
         padding: const EdgeInsets.all(20),
-        child: ListView(children: <Widget>[
+        child: ListView(
+          children: <Widget>[
           Container(
             alignment: Alignment.topLeft,
             child: Text(
@@ -139,10 +139,10 @@ class _JobListingState extends State<JobListingWidget> {
               padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
               child: ElevatedButton(
                   onPressed: () {
-                    /* Navigator.push(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Listing())); */
+                            builder: (context) => const ContactForm()));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 169, 47, 26),

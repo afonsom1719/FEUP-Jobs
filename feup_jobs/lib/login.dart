@@ -1,8 +1,7 @@
 import 'package:feup_jobs/jobBank.dart';
 import 'package:feup_jobs/register.dart';
->>>>>>> deb273691c54b25bd9b039685e668ea27fdcc3f4
-
 import 'package:flutter/material.dart';
+import 'Components/NavigationBar.dart';
 import 'listing.dart';
 
 class Login extends StatelessWidget {
@@ -12,14 +11,13 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 169, 47, 26),
-        ),
-        body: const MyStatefulWidget(),
+        appBar: CustomAppBar(),
+        body: MyStatefulWidget(),
+        drawer: CustomDrawer(),
         backgroundColor: Colors.white,
       ),
     );
@@ -61,6 +59,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: nameController,
+                key: Key('usernameinput'),
                 decoration: const InputDecoration(
                   labelText: 'User Name',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -77,6 +76,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: TextField(
                 obscureText: true,
                 controller: passwordController,
+                key: Key('passwordinput'),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -100,11 +100,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
+                    key: Key('login'),
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Bank()));
+                      validateLogin();
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 169, 47, 26),
@@ -123,13 +121,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const Register()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Register()));
                   },
                 )
               ],
             ),
           ],
         ));
+  }
+
+  void validateLogin() {
+    if(nameController.text=="up200012345" && passwordController.text=="1234"){
+      Navigator.push(context,
+      MaterialPageRoute(builder: (context) => Bank()));
+    }
   }
 }
