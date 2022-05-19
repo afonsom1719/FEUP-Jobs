@@ -1,4 +1,5 @@
 import 'package:feup_jobs/jobBank.dart';
+import 'package:feup_jobs/jobBankAuthenticated.dart';
 import 'package:feup_jobs/register.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
@@ -134,9 +135,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 
   void validateLogin() {
-    if(nameController.text=="up200012345" && passwordController.text=="1234"){
+    if (nameController.text == "up200012345" &&
+        passwordController.text == "1234") {
       Navigator.push(context,
-      MaterialPageRoute(builder: (context) => Bank()));
+          MaterialPageRoute(builder: (context) => BankAuthenticated()));
     }
   }
 }

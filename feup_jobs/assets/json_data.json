@@ -1,0 +1,50 @@
+[
+        {
+            "id": "0",
+            "title": "Funcionário de Limpezas",
+            "departm": "Outro",
+            "requirements": "Vontade de Trabalhar",
+            "description": "Procura- se funcionario de limpezas para feup e aefeup",
+            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
+            "salary": "700"
+        },
+        {
+            "id": "1",
+            "title": "Professor de LCOM",
+            "departm": "L.EIC",
+            "requirements": [
+                "Graduation in Engenharia Informática",
+                "5 anos de experiência em Javascript",
+                "Vontade de Ensinar"
+            ],
+            "description": "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea",
+            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better.",
+            "salary": "2000"
+        },
+        {
+            "id": "2",
+            "title": "Diretor de Curso",
+            "departm": "L.EGI",
+            "requirements": [
+                "Graduation in Engenharia E Gestão Industrial",
+                "5 anos de experiência em Javascript",
+                "Vontade de Dirigir"
+            ],
+            "description": "Procura- se diretor de curso para L.EGI",
+            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
+            "salary": "4000"
+        },
+        {
+            "id": "3",
+            "title": "Diretor de Turma",
+            "departm": "L.EIC",
+            "requirements": [
+                "Graduation in Engenharia Informática",
+                "5 anos de experiência em Javascript",
+                "Vontade de Aprender"
+            ],
+            "description": "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea",
+            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
+            "salary": "100"
+        }
+    ]
