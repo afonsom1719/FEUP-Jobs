@@ -17,8 +17,8 @@ class Listing extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: CustomAppBar(),
-        drawer: CustomDrawer(),
+        appBar: const CustomAppBar(),
+        drawer: const CustomDrawer(),
         body: const JobListingWidget(),
       ),
     );
@@ -48,10 +48,9 @@ class _JobListingState extends State<JobListingWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        key:Key("fullJobListing"),
+        key: const Key("fullJobListing"),
         padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: <Widget>[
+        child: ListView(children: <Widget>[
           Container(
             alignment: Alignment.topLeft,
             child: Text(
