@@ -93,7 +93,7 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
               ),
             ),
             new Positioned(
-              top: 100.0,
+              top: 110.0,
               left: 15.0,
               child: new Container(
                 height: 40.0,
