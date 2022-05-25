@@ -36,7 +36,7 @@ class ApplyStateWidget extends StatefulWidget {
 class _ApplyStateWidget extends State<ApplyStateWidget> {
   int selected = 1;
   Icon icon = const Icon(Icons.mail_outline);
-  Text txt = const Text("Your apply form was sent!");
+  String txt = "Your apply form was sent!";
 
   @override
   Widget build(BuildContext context) {
@@ -46,43 +46,49 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
           icon = const Icon(Icons.mail_outline_outlined);
         } else if (index == 1) {
           icon = const Icon(Icons.access_time_outlined);
-          txt = const Text(
-              "The company you applied for received your application, please wait patiently for an answer");
+          txt =
+              "The company you applied for received your application, please wait patiently for an answer.";
         } else {
           icon = const Icon(Icons.beenhere_outlined);
-          txt = const Text("The company already replied to your application!");
+          txt = "The company already replied to your application!";
         }
 
         return Stack(
           children: <Widget>[
             Container(
-                padding: const EdgeInsets.only(left: 40.0),
-                color: Colors.white,
-                child: new Card(
-                  margin: const EdgeInsets.all(30.0),
-                  child: new Container(
-                    width: double.infinity,
-                    height: 150.0,
-                    child: txt,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 169, 47, 26),
-                      gradient: const LinearGradient(
-                          colors: const [
-                            Color.fromARGB(255, 169, 47, 26),
-                            Colors.white,
-                          ],
-                          begin: Alignment.centerRight,
-                          end: const Alignment(-1.0, -1.0)),
-                    ),
+              padding: const EdgeInsets.only(left: 40.0, top: 30.0),
+              color: Colors.white,
+              child: new Card(
+                margin: const EdgeInsets.all(30.0),
+                child: new Container(
+                  width: double.infinity,
+                  height: 150.0,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                        child: Text(txt, style: const TextStyle(fontSize: 22))),
                   ),
-                )),
+                  decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 169, 47, 26),
+                    gradient: const LinearGradient(
+                        colors: const [
+                          Color.fromARGB(255, 169, 47, 26),
+                          Colors.white,
+                        ],
+                        begin: Alignment.centerRight,
+                        end: const Alignment(-1.0, -1.0)),
+                  ),
+                ),
+              ),
+            ),
             new Positioned(
-              top: 0.0,
-              bottom: 0.0,
+              top: (index == 0) ? 30.0 : 0.0,
+              bottom: -10,
               left: 35.0,
               child: new Container(
                 height: double.infinity,
-                width: 2.0,
+                width: 3.0,
                 color: Colors.blue,
               ),
             ),
