@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_new
+
+import 'package:feup_jobs/Apply_State_Page.dart';
 import 'package:feup_jobs/jobBank.dart';
 import 'package:feup_jobs/register.dart';
 import 'package:flutter/material.dart';
@@ -70,8 +73,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
             Container(
               padding: const EdgeInsets.all(10),
-              child: TextField(
-                decoration: const InputDecoration(
+              child: const TextField(
+                decoration: InputDecoration(
                   labelText: 'Name',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
                   iconColor: Color.fromARGB(255, 169, 47, 26),
@@ -84,8 +87,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
             Container(
               padding: const EdgeInsets.all(10),
-              child: TextField(
-                decoration: const InputDecoration(
+              child: const TextField(
+                decoration: InputDecoration(
                   labelText: 'Email',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
                   iconColor: Color.fromARGB(255, 169, 47, 26),
@@ -96,7 +99,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -108,18 +111,18 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 onInputValidated: (bool value) {
                   print(value);
                 },
-                selectorConfig: SelectorConfig(
+                selectorConfig: const SelectorConfig(
                   selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
                 ),
                 ignoreBlank: false,
                 autoValidateMode: AutovalidateMode.disabled,
-                selectorTextStyle: TextStyle(color: Colors.black),
+                selectorTextStyle: const TextStyle(color: Colors.black),
                 initialValue: number,
                 textFieldController: controller,
                 formatInput: false,
-                keyboardType: TextInputType.numberWithOptions(
+                keyboardType: const TextInputType.numberWithOptions(
                     signed: true, decimal: true),
-                inputBorder: OutlineInputBorder(
+                inputBorder: const OutlineInputBorder(
                     borderSide: BorderSide(
                   color: Color.fromARGB(255, 169, 47, 26),
                 )),
@@ -141,13 +144,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
               padding: const EdgeInsets.all(10),
-              child: TextField(
-                decoration: const InputDecoration(
+              child: const TextField(
+                decoration: InputDecoration(
                   labelText: 'Message',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
                   iconColor: Color.fromARGB(255, 169, 47, 26),
@@ -162,7 +165,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -170,9 +173,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ApplyPageState()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 169, 47, 26),
+                      primary: const Color.fromARGB(255, 169, 47, 26),
                     ),
                     child: const Text('Submit'))),
           ],

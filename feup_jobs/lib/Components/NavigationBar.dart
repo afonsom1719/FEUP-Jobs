@@ -17,6 +17,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final bool filter;
 
   @override
+  // ignore: no_logic_in_create_state
   _CustomAppBarState createState() => _CustomAppBarState(searchIcon, filter);
 }
 
@@ -69,7 +70,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 //clear filters
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 26, 122, 185),
+                primary: const Color.fromARGB(255, 26, 122, 185),
               ),
               child: const Text(
                 'RESET FILTERS',
