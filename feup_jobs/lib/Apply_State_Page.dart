@@ -79,7 +79,7 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
                         begin: Alignment.centerRight,
                         end: const Alignment(-1.0, -1.0)),
                   ),
-                ),
+                ),  
               ),
             ),
             new Positioned(
