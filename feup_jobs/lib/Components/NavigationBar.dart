@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../home.dart';
 
+import 'package:feup_jobs/applicationsPage.dart';
+
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomAppBar(
       {this.searchIcon = false,
@@ -17,6 +19,7 @@ class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final bool filter;
 
   @override
+  // ignore: no_logic_in_create_state
   _CustomAppBarState createState() => _CustomAppBarState(searchIcon, filter);
 }
 
@@ -69,7 +72,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 //clear filters
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 26, 122, 185),
+                primary: const Color.fromARGB(255, 26, 122, 185),
               ),
               child: const Text(
                 'RESET FILTERS',
@@ -200,6 +203,16 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 title: const Text('FEUP Jobs'),
                 onTap: () {},
               ),
+              ListTile(
+                  title: const Text('Current Applications'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ListPage(title: "Applications")),
+                    );
+                  }),
               ListTile(
                 title: const Text('Logout'),
                 onTap: () {
