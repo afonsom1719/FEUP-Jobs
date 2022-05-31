@@ -1,11 +1,13 @@
-// ignore_for_file: unnecessary_new, unnecessary_const
+// ignore_for_file: unnecessary_new, unnecessary_const, unnecessary_this
 
 import 'package:feup_jobs/Components/NavigationBar.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ApplyPageState extends StatelessWidget {
-  ApplyPageState({Key? key}) : super(key: key);
+  final String applicationName;
+  final String company;
+  ApplyPageState({required this.applicationName, required this.company});
 
   static const String _title = 'FEUP Jobs';
 
@@ -18,7 +20,7 @@ class ApplyPageState extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: topAppBar,
+        appBar: topAppBar(this.applicationName, company),
         drawer: const CustomDrawer(),
         body: const ApplyStateWidget(),
       ),
@@ -121,9 +123,11 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
   }
 }
 
-final topAppBar = AppBar(
-  elevation: 0.1,
-  backgroundColor: const Color.fromARGB(255, 169, 47, 26),
-  title: const Text("Título Candidatura  -  Empresa"),
-  actions: <Widget>[],
-);
+AppBar topAppBar(String applicationName, String company) {
+  return AppBar(
+    elevation: 0.1,
+    backgroundColor: const Color.fromARGB(255, 169, 47, 26),
+    title: Text(applicationName + "  -  " + company),
+    actions: <Widget>[],
+  );
+}

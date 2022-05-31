@@ -73,8 +73,12 @@ class _ListPageState extends State<ListPage> {
           trailing: const Icon(Icons.keyboard_arrow_right,
               color: Colors.white, size: 30.0),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ApplyPageState()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ApplyPageState(
+                        applicationName: application.title,
+                        company: application.company)));
           },
         );
 
