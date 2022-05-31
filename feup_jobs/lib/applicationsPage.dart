@@ -123,7 +123,7 @@ List getApplications() {
     Application(
       title: "Junior Data Scientist",
       company: "Google",
-      indicatorValue: 0.75,
+      indicatorValue: 1,
     ),
     Application(
       title: "Senior Backend Developer",
@@ -138,7 +138,7 @@ List getApplications() {
     Application(
       title: "Fullstack Developer",
       company: "Amazon",
-      indicatorValue: 0.75,
+      indicatorValue: 0.9,
     ),
   ];
 }

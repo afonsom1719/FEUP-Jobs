@@ -51,11 +51,14 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (widget.state >= 0.25) selected = 0;
-    if (widget.state >= 0.50 && widget.state <= 0.75) selected = 1;
-    if (widget.state >= 0.75) selected = 3;
-
-    selected = widget.state / 2;
+    if (widget.state >= 0.25 && widget.state < 0.50) {
+      selected = 0;
+    } else if (widget.state >= 0.50 && widget.state < 0.75) {
+      selected = 1;
+    }
+    if (widget.state >= 0.75) {
+      selected = 2;
+    }
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         if (index == 0) {
