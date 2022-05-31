@@ -35,7 +35,7 @@ class _ListPageState extends State<ListPage> {
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           leading: Container(
-            padding: EdgeInsets.only(right: 12.0),
+            padding: const EdgeInsets.only(right: 12.0),
             decoration: const BoxDecoration(
                 border: const Border(
                     right:
