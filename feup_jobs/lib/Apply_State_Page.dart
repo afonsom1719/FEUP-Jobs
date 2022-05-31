@@ -18,7 +18,7 @@ class ApplyPageState extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: const CustomAppBar(),
+        appBar: topAppBar,
         drawer: const CustomDrawer(),
         body: const ApplyStateWidget(),
       ),
@@ -120,3 +120,10 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
     );
   }
 }
+
+final topAppBar = AppBar(
+  elevation: 0.1,
+  backgroundColor: const Color.fromARGB(255, 169, 47, 26),
+  title: const Text("Título Candidatura  -  Empresa"),
+  actions: <Widget>[],
+);
