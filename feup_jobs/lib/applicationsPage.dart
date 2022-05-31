@@ -2,7 +2,6 @@
 // ignore_for_file: unnecessary_const
 
 import 'package:feup_jobs/Apply_State_Page.dart';
-import 'package:feup_jobs/Components/NavigationBar.dart';
 import 'package:flutter/material.dart';
 
 class Application {
@@ -78,7 +77,8 @@ class _ListPageState extends State<ListPage> {
                 MaterialPageRoute(
                     builder: (context) => ApplyPageState(
                         applicationName: application.title,
-                        company: application.company)));
+                        company: application.company,
+                        state: application.indicatorValue)));
           },
         );
 

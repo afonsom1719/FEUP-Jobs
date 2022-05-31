@@ -7,7 +7,13 @@ import 'package:flutter/material.dart';
 class ApplyPageState extends StatelessWidget {
   final String applicationName;
   final String company;
-  ApplyPageState({required this.applicationName, required this.company});
+  late double state;
+  ApplyPageState(
+      {Key? key,
+      required this.applicationName,
+      required this.company,
+      required this.state})
+      : super(key: key);
 
   static const String _title = 'FEUP Jobs';
 
@@ -20,28 +26,36 @@ class ApplyPageState extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: topAppBar(this.applicationName, company),
+        appBar: topAppBar(this.applicationName, this.company),
         drawer: const CustomDrawer(),
-        body: const ApplyStateWidget(),
+        body: ApplyStateWidget(
+          state: this.state,
+        ),
       ),
     );
   }
 }
 
 class ApplyStateWidget extends StatefulWidget {
-  const ApplyStateWidget({Key? key}) : super(key: key);
+  final double state;
+  const ApplyStateWidget({Key? key, required this.state}) : super(key: key);
 
   @override
   State<ApplyStateWidget> createState() => _ApplyStateWidget();
 }
 
 class _ApplyStateWidget extends State<ApplyStateWidget> {
-  int selected = 1;
+  late double selected;
   Icon icon = const Icon(Icons.mail_outline);
   String txt = "Your apply form was sent!";
 
   @override
   Widget build(BuildContext context) {
+    if (widget.state >= 0.25) selected = 0;
+    if (widget.state >= 0.50 && widget.state <= 0.75) selected = 1;
+    if (widget.state >= 0.75) selected = 3;
+
+    selected = widget.state / 2;
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         if (index == 0) {
