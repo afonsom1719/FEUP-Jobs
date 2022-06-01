@@ -1,11 +1,10 @@
-[
+{ "jobs": [
         {
             "id": "0",
             "title": "Funcionário de Limpezas",
             "departm": "Outro",
             "requirements": "Vontade de Trabalhar",
             "description": "Procura- se funcionario de limpezas para feup e aefeup",
-            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
             "salary": "700"
         },
         {
@@ -17,8 +16,7 @@
                 "5 anos de experiência em Javascript",
                 "Vontade de Ensinar"
             ],
-            "description": "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea",
-            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better.",
+            "description": "Procura-se professor para ocupar vaga como regente de LCOM",
             "salary": "2000"
         },
         {
@@ -31,20 +29,16 @@
                 "Vontade de Dirigir"
             ],
             "description": "Procura- se diretor de curso para L.EGI",
-            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
             "salary": "4000"
         },
         {
             "id": "3",
-            "title": "Diretor de Turma",
-            "departm": "L.EIC",
+            "title": "Responsável do ano curricular do curso de Eng. Civil",
+            "departm": "L.EC",
             "requirements": [
-                "Graduation in Engenharia Informática",
-                "5 anos de experiência em Javascript",
-                "Vontade de Aprender"
+                "Vontade de Ajudar"
             ],
-            "description": "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea",
-            "extra": "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better",
+            "description": "Procura-se aluno interessado em organizar e ouvir todos os pedidos e assuntos relacionados ao ano 3 do curso L.EC 21/22",
             "salary": "100"
         }
-    ]
+    ]}
