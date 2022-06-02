@@ -1,11 +1,19 @@
-// ignore_for_file: unnecessary_new, unnecessary_const
+// ignore_for_file: unnecessary_new, unnecessary_const, unnecessary_this
 
 import 'package:feup_jobs/Components/NavigationBar.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ApplyPageState extends StatelessWidget {
-  ApplyPageState({Key? key}) : super(key: key);
+  final String applicationName;
+  final String company;
+  late double state;
+  ApplyPageState(
+      {Key? key,
+      required this.applicationName,
+      required this.company,
+      required this.state})
+      : super(key: key);
 
   static const String _title = 'FEUP Jobs';
 
@@ -18,28 +26,39 @@ class ApplyPageState extends StatelessWidget {
       title: _title,
       home: Scaffold(
         key: _scaffoldkey,
-        appBar: topAppBar,
+        appBar: topAppBar(this.applicationName, this.company),
         drawer: const CustomDrawer(),
-        body: const ApplyStateWidget(),
+        body: ApplyStateWidget(
+          state: this.state,
+        ),
       ),
     );
   }
 }
 
 class ApplyStateWidget extends StatefulWidget {
-  const ApplyStateWidget({Key? key}) : super(key: key);
+  final double state;
+  const ApplyStateWidget({Key? key, required this.state}) : super(key: key);
 
   @override
   State<ApplyStateWidget> createState() => _ApplyStateWidget();
 }
 
 class _ApplyStateWidget extends State<ApplyStateWidget> {
-  int selected = 1;
+  late double selected;
   Icon icon = const Icon(Icons.mail_outline);
   String txt = "Your apply form was sent!";
 
   @override
   Widget build(BuildContext context) {
+    if (widget.state >= 0.25 && widget.state < 0.50) {
+      selected = 0;
+    } else if (widget.state >= 0.50 && widget.state < 0.75) {
+      selected = 1;
+    }
+    if (widget.state >= 0.75) {
+      selected = 2;
+    }
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) {
         if (index == 0) {
@@ -121,9 +140,11 @@ class _ApplyStateWidget extends State<ApplyStateWidget> {
   }
 }
 
-final topAppBar = AppBar(
-  elevation: 0.1,
-  backgroundColor: const Color.fromARGB(255, 169, 47, 26),
-  title: const Text("Título Candidatura  -  Empresa"),
-  actions: <Widget>[],
-);
+AppBar topAppBar(String applicationName, String company) {
+  return AppBar(
+    elevation: 0.1,
+    backgroundColor: const Color.fromARGB(255, 169, 47, 26),
+    title: Text(applicationName + "  -  " + company),
+    actions: <Widget>[],
+  );
+}

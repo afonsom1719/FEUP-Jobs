@@ -138,7 +138,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     if (nameController.text == "up200012345" &&
         passwordController.text == "1234") {
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => BankAuthenticated()));
+          MaterialPageRoute(builder: (context) => const BankAuthenticated()));
     }
   }
 }

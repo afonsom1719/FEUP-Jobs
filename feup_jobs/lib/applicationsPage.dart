@@ -2,7 +2,6 @@
 // ignore_for_file: unnecessary_const
 
 import 'package:feup_jobs/Apply_State_Page.dart';
-import 'package:feup_jobs/Components/NavigationBar.dart';
 import 'package:flutter/material.dart';
 
 class Application {
@@ -73,8 +72,13 @@ class _ListPageState extends State<ListPage> {
           trailing: const Icon(Icons.keyboard_arrow_right,
               color: Colors.white, size: 30.0),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ApplyPageState()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ApplyPageState(
+                        applicationName: application.title,
+                        company: application.company,
+                        state: application.indicatorValue)));
           },
         );
 
@@ -119,7 +123,7 @@ List getApplications() {
     Application(
       title: "Junior Data Scientist",
       company: "Google",
-      indicatorValue: 0.75,
+      indicatorValue: 1,
     ),
     Application(
       title: "Senior Backend Developer",
@@ -134,7 +138,7 @@ List getApplications() {
     Application(
       title: "Fullstack Developer",
       company: "Amazon",
-      indicatorValue: 0.75,
+      indicatorValue: 0.9,
     ),
   ];
 }
