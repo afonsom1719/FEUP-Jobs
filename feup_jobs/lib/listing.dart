@@ -1,3 +1,4 @@
+import 'package:feup_jobs/applyForm.dart';
 import 'package:feup_jobs/contactForm.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
@@ -141,7 +142,7 @@ class _JobListingState extends State<JobListingWidget> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ContactForm()));
+                            builder: (context) => ApplyForm(jobPosition: _title,)));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 169, 47, 26),
