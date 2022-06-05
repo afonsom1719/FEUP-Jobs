@@ -6,9 +6,10 @@ import 'Components/NavigationBar.dart';
 import 'listing.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+  const Login(bool isLoggedIn, {Key? key}) : super(key: key);
 
   static const String _title = 'FEUP Jobs';
+  
 
   @override
   Widget build(BuildContext context) {
@@ -137,6 +138,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   void validateLogin() {
     if (nameController.text == "up200012345" &&
         passwordController.text == "1234") {
+      setState(() {
+        _isLoggedIn = true;
+      });
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => BankAuthenticated()));
     }

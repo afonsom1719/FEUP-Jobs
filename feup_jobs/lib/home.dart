@@ -31,6 +31,7 @@ class HomeOptionsWidget extends StatefulWidget {
 }
 
 class _HomeOptionsWidget extends State<HomeOptionsWidget> {
+  bool _isLoggedIn = false;
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style =
@@ -59,7 +60,7 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Login()),
+                  MaterialPageRoute(builder: (context) => const Login(this._isLoggedIn)),
                 );
               },
               style: ElevatedButton.styleFrom(
