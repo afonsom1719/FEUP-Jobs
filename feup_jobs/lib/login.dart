@@ -142,7 +142,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         _isLoggedIn = true;
       });
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => BankAuthenticated()));
+          MaterialPageRoute(builder: (context) => const BankAuthenticated()));
     }
   }
 }
