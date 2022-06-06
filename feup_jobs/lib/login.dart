@@ -61,7 +61,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: nameController,
-                key: Key('usernameinput'),
+                key: const Key('usernameinput'),
                 decoration: const InputDecoration(
                   labelText: 'User Name',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -78,7 +78,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: TextField(
                 obscureText: true,
                 controller: passwordController,
-                key: Key('passwordinput'),
+                key: const Key('passwordinput'),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -102,7 +102,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                    key: Key('login'),
+                    key: const Key('login'),
                     onPressed: () {
                       validateLogin();
                     },

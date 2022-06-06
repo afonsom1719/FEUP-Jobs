@@ -132,8 +132,8 @@ class _JobBankState extends State<JobBankWidget> {
                               builder: (context) => const Sort())); */
                     },
                     style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 169, 47, 26),
-                        fixedSize: Size(100, 20)),
+                        primary: const Color.fromARGB(255, 169, 47, 26),
+                        fixedSize: const Size(100, 20)),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 12.0, right: 12),
                       child: Text('Sort'),
@@ -147,8 +147,8 @@ class _JobBankState extends State<JobBankWidget> {
                               builder: (context) => const HoverSearch())); */
                     },
                     style: ElevatedButton.styleFrom(
-                        primary: Color.fromARGB(255, 169, 47, 26),
-                        fixedSize: Size(100, 20)),
+                        primary: const Color.fromARGB(255, 169, 47, 26),
+                        fixedSize: const Size(100, 20)),
                     child: const Padding(
                       padding: EdgeInsets.only(left: 12.0, right: 12),
                       child: Text('Search'),
@@ -161,7 +161,7 @@ class _JobBankState extends State<JobBankWidget> {
               height: 20,
             ),
             InkWell(
-              key: Key('firstJobListing'),
+              key: const Key('firstJobListing'),
               child: Container(
                 alignment: Alignment.topLeft,
                 padding: const EdgeInsets.only(left: 5.0, top: 15.0),
