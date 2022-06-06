@@ -79,7 +79,8 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Bank()),
+                  MaterialPageRoute(
+                      builder: (context) => const Bank(title: "")),
                 );
               },
               style: ElevatedButton.styleFrom(

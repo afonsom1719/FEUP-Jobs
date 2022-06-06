@@ -145,6 +145,6 @@ AppBar topAppBar(String applicationName, String company) {
     elevation: 0.1,
     backgroundColor: const Color.fromARGB(255, 169, 47, 26),
     title: Text(applicationName + "  -  " + company),
-    actions: <Widget>[],
+    actions: const <Widget>[],
   );
 }

@@ -3,13 +3,15 @@ import 'package:feup_jobs/contactForm.dart';
 import 'package:flutter/material.dart';
 import 'Components/NavigationBar.dart';
 import 'Components/BulletList.dart';
+import 'jobs.dart';
 
 class Listing extends StatelessWidget {
-  Listing({Key? key}) : super(key: key);
+  final Job job;
+  Listing({Key? key, required this.job}) : super(key: key);
 
   static const String _title = 'FEUP Jobs';
 
-  GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +22,15 @@ class Listing extends StatelessWidget {
         key: _scaffoldkey,
         appBar: const CustomAppBar(),
         drawer: const CustomDrawer(),
-        body: const JobListingWidget(),
+        body: JobListingWidget(job: job),
       ),
     );
   }
 }
 
 class JobListingWidget extends StatefulWidget {
-  const JobListingWidget({Key? key}) : super(key: key);
+  final Job job;
+  const JobListingWidget({Key? key, required this.job}) : super(key: key);
 
   @override
   State<JobListingWidget> createState() => _JobListingState();
@@ -55,7 +58,7 @@ class _JobListingState extends State<JobListingWidget> {
           Container(
             alignment: Alignment.topLeft,
             child: Text(
-              _title,
+              widget.job.title,
               style: const TextStyle(
                   color: Colors.orangeAccent,
                   fontWeight: FontWeight.w500,
@@ -66,7 +69,7 @@ class _JobListingState extends State<JobListingWidget> {
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 5.0),
               child: Text(
-                _departm,
+                widget.job.departm,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
@@ -88,7 +91,7 @@ class _JobListingState extends State<JobListingWidget> {
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 15.0),
               child: Text(
-                _description,
+                widget.job.description,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
@@ -109,7 +112,7 @@ class _JobListingState extends State<JobListingWidget> {
           Container(
             alignment: Alignment.topLeft,
             padding: const EdgeInsets.only(left: 15.0, top: 10.0),
-            child: UnorderedList(_requirements),
+            child: UnorderedList(widget.job.requirements),
           ),
           Container(
               alignment: Alignment.topLeft,
@@ -142,7 +145,9 @@ class _JobListingState extends State<JobListingWidget> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ApplyForm(jobPosition: _title,)));
+                            builder: (context) => ApplyForm(
+                                  jobPosition: widget.job.title,
+                                )));
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Color.fromARGB(255, 169, 47, 26),

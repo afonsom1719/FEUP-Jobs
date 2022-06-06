@@ -6,10 +6,9 @@ import 'Components/NavigationBar.dart';
 import 'listing.dart';
 
 class Login extends StatelessWidget {
-  const Login( {Key? key}) : super(key: key);
+  const Login({Key? key}) : super(key: key);
 
   static const String _title = 'FEUP Jobs';
-  
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +60,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: nameController,
-                key: Key('usernameinput'),
+                key: const Key('usernameinput'),
                 decoration: const InputDecoration(
                   labelText: 'User Name',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -78,7 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: TextField(
                 obscureText: true,
                 controller: passwordController,
-                key: Key('passwordinput'),
+                key: const Key('passwordinput'),
                 decoration: const InputDecoration(
                   labelText: 'Password',
                   labelStyle: TextStyle(color: Colors.orangeAccent),
@@ -102,7 +101,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 color: Colors.orange,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                    key: Key('login'),
+                    key: const Key('login'),
                     onPressed: () {
                       validateLogin();
                     },
@@ -138,8 +137,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   void validateLogin() {
     if (nameController.text == "up200012345" &&
         passwordController.text == "1234") {
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const BankAuthenticated()));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => const BankAuthenticated(
+                    title: '',
+                  )));
     }
   }
 }
