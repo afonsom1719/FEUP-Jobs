@@ -10,6 +10,7 @@ import 'package:uni/view/Widgets/schedule_row.dart';
 import 'package:uni/view/Widgets/title_card.dart';
 
 class ExamsPageView extends StatefulWidget {
+  
   @override
   State<StatefulWidget> createState() => ExamsPageViewState();
 }
@@ -107,7 +108,7 @@ class ExamsList extends StatelessWidget {
     );
   }
 
-  Widget createExamsCards(context, exams) {
+  Widget createExamsCards(context, exams){
     final List<Widget> examCards = <Widget>[];
     examCards.add(TitleCard(
         day: exams[0].day, weekDay: exams[0].weekDay, month: exams[0].month));

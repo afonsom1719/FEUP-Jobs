@@ -20,6 +20,10 @@ class FEUPJobsHomeState extends GeneralPageViewState {
           Container(
             padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
             alignment: Alignment.center,
+            child: Image.asset(
+              'assets/images/feup-jobs-logo.png',
+              height: 220,
+            ),
           ),
           Container(
             height: 50,

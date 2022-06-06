@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uni/view/Pages/feup_jobs/feup_jobs_home_page_view.dart';
-import 'package:uni/view/Pages/feup_jobs/job_filter_page_filter.dart';
+import 'package:uni/view/Pages/feup_jobs/job_filter_page_view.dart';
 import 'package:uni/view/Pages/feup_jobs/job_listing_page_view.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 
@@ -71,20 +71,13 @@ class JobsAtFEUPState extends SecondaryPageViewState {
                   Padding(
                     padding: EdgeInsets.only(right: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => FilterScreenView(),
-                          ),
-                        );
-                      },
+                      onPressed: () {},
                       style: ElevatedButton.styleFrom(
                           primary: const Color.fromARGB(255, 169, 47, 26),
                           fixedSize: const Size(100, 20)),
                       child: const Padding(
                         padding: EdgeInsets.only(left: 12.0, right: 12),
-                        child: Text('Filter'),
+                        child: Text('Search'),
                       ),
                     ),
                   ),
@@ -98,7 +91,7 @@ class JobsAtFEUPState extends SecondaryPageViewState {
               key: Key('firstJobListing'),
               child: Container(
                 alignment: Alignment.topLeft,
-                padding: const EdgeInsets.only(left: 5.0, top: 15.0),
+                padding: const EdgeInsets.only(left: 5.0, top: 5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
