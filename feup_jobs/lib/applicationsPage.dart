@@ -31,12 +31,13 @@ Future wait(int seconds) {
 
 Future<List<Application>> _readJson() async {
   List<Application> _items = [];
-  final String response = await rootBundle.loadString('assets/json_data.json');
+  final String response =
+      await rootBundle.loadString('assets/applications.json');
   final List<dynamic> data = await json.decode(response);
 
   for (dynamic it in data) {
-    final Application organization = Application.fromJson(it); // Parse data
-    _items.add(organization); // and organization to List
+    final Application application = Application.fromJson(it); // Parse data
+    _items.add(application); // and organization to List
   }
 
   return _items;
@@ -142,7 +143,7 @@ class _ListPageState extends State<ListPage> {
       elevation: 0.1,
       backgroundColor: const Color.fromARGB(255, 169, 47, 26),
       title: Text(widget.title),
-      actions: <Widget>[],
+      actions: const <Widget>[],
     );
 
     return Scaffold(appBar: topAppBar, body: futureWiddget());
