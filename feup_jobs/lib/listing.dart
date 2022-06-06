@@ -146,7 +146,7 @@ class _JobListingState extends State<JobListingWidget> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => ApplyForm(
-                                  jobPosition: _title,
+                                  jobPosition: widget.job.title,
                                 )));
                   },
                   style: ElevatedButton.styleFrom(
