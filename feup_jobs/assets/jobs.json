@@ -1,0 +1,50 @@
+[
+  {
+    "id": "0",
+    "title": "Funcionário de Limpezas",
+    "departm": "Outro",
+    "requirements": 
+        ["Graduation in Engenharia E Gestão Industrial",
+        "5 anos de experiência em Javascript",
+        "Vontade de Dirigir"
+      ],
+    "description": "Procura-se funcionário de limpezas para FEUP e aefeup,",
+    "salary": "700"
+  },
+  {
+    "id": "1",
+    "title": "Professor de LCOM",
+    "departm": "L.EIC",
+    "requirements": 
+        ["Graduation in Engenharia E Gestão Industrial",
+        "5 anos de experiência em Javascript",
+        "Vontade de Dirigir"
+      ],
+    "description": "Procura-se professor para ocupar vaga como regente de LCOM",
+    "salary": "2000"
+  },
+  {
+    "id": "2",
+    "title": "Diretor de Curso",
+    "departm": "L.EGI",
+    "requirements": 
+        ["Graduation in Engenharia E Gestão Industrial",
+        "5 anos de experiência em Javascript",
+        "Vontade de Dirigir"
+      ],
+    "description": "Procura- se diretor de curso para L.EGI",
+    "salary": "4000"
+  },
+  {
+    "id": "3",
+    "title": "Responsável do ano curricular do curso de Eng. Civil",
+    "departm": "L.EGI",
+    "requirements": 
+        ["Graduation in Engenharia E Gestão Industrial",
+        "5 anos de experiência em Javascript",
+        "Vontade de Dirigir"
+      ],
+    "description": "Procura-se aluno interessado em organizar e ouvir todos os pedidos e assuntos relacionados ao ano 3 do curso L.EC 21/22",
+    "salary": "150"
+  }
+]
