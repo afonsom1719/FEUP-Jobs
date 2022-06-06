@@ -28,7 +28,7 @@ class ApplyForm extends StatelessWidget {
 
 class MyStatefulWidget extends StatefulWidget {
   final String jobPosition;
-  MyStatefulWidget({Key? key, required this.jobPosition}): super(key: key);
+  const MyStatefulWidget({Key? key, required this.jobPosition}): super(key: key);
 
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
@@ -73,7 +73,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     const SizedBox(height: 20,),
                     const Text(
                       'Application Form',
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w500,
                           fontSize: 35),

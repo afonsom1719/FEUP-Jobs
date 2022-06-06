@@ -66,6 +66,7 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/jobs.json
+    - assets/jobBank.json
     - assets/applications.json
   #   - images/a_dot_ham.jpeg
 

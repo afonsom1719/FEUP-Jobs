@@ -10,30 +10,6 @@ import 'package:flutter/services.dart';
 import 'Components/NavigationBar.dart';
 import 'package:feup_jobs/filterScreen.dart';
 
-class Job {
-  late String id;
-  late String title;
-  late String departm;
-  late List<String> requirements;
-  late String description;
-  late String salary;
-
-  Job(
-      {required this.id,
-      required this.title,
-      required this.departm,
-      required this.description,
-      required this.salary});
-
-  Job.fromJson(Map<String, dynamic> json) {
-    id = json["id"];
-    title = json["title"];
-    departm = json["departm"];
-    description = json["description"];
-    salary = json["salary"];
-  }
-}
-
 Future<List<Job>> _readJson() async {
   List<Job> _items = [];
   final String response = await rootBundle.loadString('assets/jobs.json');
@@ -89,7 +65,11 @@ class _ListPageState extends State<BankAuthenticated> {
           ),
           onTap: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Listing()));
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Listing(
+                          job: application,
+                        )));
           },
         ),
       );
