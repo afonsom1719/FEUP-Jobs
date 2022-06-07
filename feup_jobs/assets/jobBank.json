@@ -1,50 +1,62 @@
 [
-    {
-      "id": "0",
-      "title": "Sr. Cloud Security IS Engineer",
-      "departm": "Amgen’s Cloud Security",
-      "requirements": [
-        "Graduation in Computer Science",
-        "5 years of experience in Python",
-        "Leadership capabilities"
-      ],
-      "description": "Amgen is seeking a Cloud Security Engineer to join Amgen’s Cloud Security organization who will be reporting into the Global Information Protection Organization in Amgen and will be based in Lisbon, PRT, at Amgen’s new Capability Center.",
-      "salary": "1200"
-    },
-    {
-      "id": "1",
-      "title": "IT - Robotic Process Automation - Centro, Brazil",
-      "departm": "L.EIC",
-      "requirements": [
-        "Graduation in Enginering",
-        "Diverse soft skills",
-        "Team work capabilities"
-      ],
-      "description": "Work with Information Technology engaging in the brainstorming process to develop programmatic codes in Brazil. This job offer is a trainee program in a digital bank specialized on accountability consultancy.",
-      "salary": "1000"
-    },
-    {
-      "id": "2",
-      "title": "Developer (Digital Manufacturing Technology)",
-      "departm": "SDC",
-      "requirements": [
-        "Experience in softtware engineering",
-        "Previous work experience",
-        "Will to learn"
-      ],
-      "description": "As part of our Manufacturing Technology Engineering Organization, our team of the SDC develops, implements and supports automation solutions for our tire plants worldwide.",
-      "salary": "1300"
-    },
-    {
-      "id": "3",
-      "title": "Opportunity for students - Amazon",
-      "departm": "Amazon",
-      "requirements": [
-        "Availabilty to travel",
-        "Vision of innovation and future",
-        "Ability to work in big teams"
-      ],
-      "description": "Amazon is searching for students to enroll in a long-term, full-time working program with possibilities to go up in the company's hierarchy.",
-      "salary": "2200"
-    }
-  ]
+  {
+    "id": "0",
+    "title": "Sr. Cloud Security IS Engineer",
+    "departm": "Amgen’s Cloud Security",
+    "requirements": [
+      "Graduation in Computer Science",
+      "5 years of experience in Python",
+      "Leadership capabilities"
+    ],
+    "description": "Amgen is seeking a Cloud Security Engineer to join Amgen’s Cloud Security organization who will be reporting into the Global Information Protection Organization in Amgen and will be based in Lisbon, PRT, at Amgen’s new Capability Center.",
+    "salary": "1200"
+  },
+  {
+    "id": "1",
+    "title": "IT - Robotic Process Automation - Centro, Brazil",
+    "departm": "L.EIC",
+    "requirements": [
+      "Graduation in Enginering",
+      "Diverse soft skills",
+      "Team work capabilities"
+    ],
+    "description": "Work with Information Technology engaging in the brainstorming process to develop programmatic codes in Brazil. This job offer is a trainee program in a digital bank specialized on accountability consultancy.",
+    "salary": "1000"
+  },
+  {
+    "id": "2",
+    "title": "Developer (Digital Manufacturing Technology)",
+    "departm": "SDC",
+    "requirements": [
+      "Experience in softtware engineering",
+      "Previous work experience",
+      "Will to learn"
+    ],
+    "description": "As part of our Manufacturing Technology Engineering Organization, our team of the SDC develops, implements and supports automation solutions for our tire plants worldwide.",
+    "salary": "1300"
+  },
+  {
+    "id": "3",
+    "title": "Opportunity for students - Amazon",
+    "departm": "Amazon",
+    "requirements": [
+      "Availabilty to travel",
+      "Vision of innovation and future",
+      "Ability to work in big teams"
+    ],
+    "description": "Amazon is searching for students to enroll in a long-term, full-time working program with possibilities to go up in the company's hierarchy.",
+    "salary": "2200"
+  },
+  {
+    "id": "4",
+    "title": "iOS Developer",
+    "departm": "ITSector, SA",
+    "requirements": [
+      "Degree in Computer Engineering or similar",
+      "Knowledge of Objective-C and/or Swift",
+      "nowledge of Web Services (AFNetworking/ Alamofire JSON)"
+    ],
+    "description": "ITSector is a software development company specialized in digital transformation for the financial sector. We are looking for a recent grad student to expand our iOS dev team",
+    "salary": "2700"
+  }
+]

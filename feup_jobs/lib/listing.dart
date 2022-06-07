@@ -140,7 +140,7 @@ class _JobListingState extends State<JobListingWidget> {
                                 )));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 169, 47, 26),
+                    primary: const Color.fromARGB(255, 169, 47, 26),
                   ),
                   child: const Text('Apply'))),
         ]));

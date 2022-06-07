@@ -46,5 +46,17 @@
       ],
     "description": "Procura-se aluno interessado em organizar e ouvir todos os pedidos e assuntos relacionados ao ano 3 do curso de Licenciatura em Engenharia Civil para o ano letivo 2021/2022. No caso de haver mais do que um candidato a esta posição, a escolha será feita através de eleição em data a determinar.",
     "salary": "150" 
+  },
+  {
+    "id": "4",
+    "title": "Secretário(a) FEUP Desk",
+    "departm": "Serviço de Secretariado",
+    "requirements": 
+        ["Dinamismo, proatividade e boa capacidade de comunicação e organização.",
+        "Utilizador experiente do Office (Outlook, Word, Excel),",
+        "Valoriza-se experiência em função e/ou mercado,"
+      ],
+    "description": "Procuramos colaborador para integrar a equipa de secretariado da FEUP, com elevados conhecimentos de língua Portuguesa e Inglesa (Condição Obrigatória).",
+    "salary": "1000" 
   }
 ]

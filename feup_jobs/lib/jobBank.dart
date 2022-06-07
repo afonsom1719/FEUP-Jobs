@@ -85,16 +85,13 @@ class _ListPageState extends State<Bank> {
         future: _readJson(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Container(
-              // decoration: BoxDecoration(color: Color.fromRGBO(58, 66, 86, 1.0)),
-              child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                itemCount: snapshot.data?.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return makeCard(snapshot.data!.elementAt(index));
-                },
-              ),
+            return ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              itemCount: snapshot.data?.length,
+              itemBuilder: (BuildContext context, int index) {
+                return makeCard(snapshot.data!.elementAt(index));
+              },
             );
           } else if (snapshot.hasError) {
             return Text("$snapshot.error");
@@ -106,6 +103,7 @@ class _ListPageState extends State<Bank> {
 
   Widget createMainView(BuildContext context) {
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
