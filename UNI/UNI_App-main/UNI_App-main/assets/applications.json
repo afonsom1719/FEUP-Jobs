@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Junior Data Scientist",
+    "company": "Google",
+    "indicatorValue": 1.0
+  },
+  {
+    "title": "Senior Backend Developer",
+    "company": "Facebook",
+    "indicatorValue": 0.25
+  },
+  {
+    "title": "Frontend Developer Trainee",
+    "company": "Primavera",
+    "indicatorValue": 0.5
+  },
+  {
+    "title": "Fullstack Developer",
+    "company": "Amazon",
+    "indicatorValue": 0.9
+  }, 
+  {
+    "title": "Security Engineer",
+    "company": "Netflix",
+    "indicatorValue": 0.5
+  }
+]

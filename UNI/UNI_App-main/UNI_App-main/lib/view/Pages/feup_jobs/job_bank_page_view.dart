@@ -1,8 +1,29 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:uni/view/Pages/feup_jobs/job_listing_page_view.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 
+import '../../../model/app_state.dart';
 import '../general_page_view.dart';
+import 'job.dart';
 import 'job_filter_page_view.dart';
+
+Future<List<Job>> _readJson() async {
+  List<Job> _items = [];
+  final String response = await rootBundle.loadString('assets/jobBank.json');
+  final List<dynamic> data = await json.decode(response);
+
+  for (dynamic it in data) {
+    final Job application = Job.fromJson(it); // Parse data
+
+    _items.add(application); // and organization to List
+  }
+
+  return _items;
+}
 
 class JobBankView extends StatefulWidget {
   @override
@@ -10,19 +31,86 @@ class JobBankView extends StatefulWidget {
 }
 
 class JobBankState extends SecondaryPageViewState {
-  final String _title = 'FEUP\'s Job Bank';
-  final String _b1t = 'Sr. Cloud Security IS Engineer';
-  final String _b1d =
-      'Amgen is seeking a Cloud Security Engineer to join Amgen’s Cloud Security organization who will be reporting into the Global Information Protection Organization in Amgen and will be based in Lisbon, PRT, at Amgen’s new Capability Center.';
-  final String _b2t = 'IT - Robotic Process Automation - Centro, Brazil';
-  final String _b2d =
-      'Work with Information Technology engaging in the brainstorming process to develop programmatic codes in Brazil. This job offer is a trainee program in a digital bank specialized on accountability consultancy.';
-  final String _b3t = 'Developer (Digital Manufacturing Technology)';
-  final String _b3d =
-      'As part of our Manufacturing Technology Engineering Organization, our team of the SDC develops, implements and supports automation solutions for our tire plants worldwide.';
+  Padding makeListTile(Job application) => Padding(
+        padding: const EdgeInsets.all(10),
+        child: InkWell(
+          child: Container(
+            alignment: Alignment.topLeft,
+            padding: const EdgeInsets.only(left: 5.0, top: 0.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(application.title,
+                    textAlign: TextAlign.left,
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700,
+                      fontSize: 18,
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Text(
+                    application.description,
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => JobListingView(
+                          application,
+                        )));
+          },
+        ),
+      );
 
-  @override
-  Widget getBody(BuildContext context) {
+  Card makeCard(Job lesson) => Card(
+        elevation: 1.0,
+        margin: const EdgeInsets.fromLTRB(2.0, 0.0, 2.0, 20.0),
+        child: makeListTile(lesson),
+      );
+
+  Widget futureWidget() {
+    return StoreConnector<AppState, List<String>>(converter: (store) {
+      var jobFilters = store.state.content['jobFilters'];
+      return jobFilters;
+    }, builder: (context, jobFilters) {
+      return FutureBuilder<List<Job>>(
+          future: _readJson(),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              var filteredData = snapshot.data;
+              if (jobFilters.isNotEmpty) {
+                filteredData = snapshot.data
+                    .where((element) => jobFilters.contains(element.departm));
+              }
+
+              return ListView.builder(
+                physics: ScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: filteredData?.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return makeCard(filteredData.elementAt(index));
+                },
+              );
+            } else if (snapshot.hasError) {
+              return Text("$snapshot.error");
+            }
+
+            return Text("$snapshot.error");
+          });
+    });
+  }
+
+  Widget createMainView(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -30,9 +118,9 @@ class JobBankState extends SecondaryPageViewState {
           children: <Widget>[
             Container(
               alignment: Alignment.topLeft,
-              child: Text(
-                _title,
-                style: const TextStyle(
+              child: const Text(
+                "FEUP\'s Job Bank",
+                style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
                     fontSize: 24),
@@ -40,7 +128,7 @@ class JobBankState extends SecondaryPageViewState {
             ),
             Container(
               alignment: Alignment.center,
-              padding: const EdgeInsets.only(top: 25.0),
+              padding: const EdgeInsets.only(top: 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -83,121 +171,17 @@ class JobBankState extends SecondaryPageViewState {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
-            InkWell(
-              key: Key('firstJobListing'),
-              child: Container(
-                alignment: Alignment.topLeft,
-                padding: const EdgeInsets.only(left: 5.0, top: 5.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(_b1t,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        _b1d,
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              onTap: () {
-                // Navigator.push( //context,
-                //     MaterialPageRoute(builder: (context) => Listing()));
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: InkWell(
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.only(left: 5.0, top: 15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(_b2t,
-                          textAlign: TextAlign.left,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18,
-                          )),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          _b2d,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                onTap: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => Listing()));
-                },
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: InkWell(
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  padding: const EdgeInsets.only(left: 5.0, top: 15.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(_b3t,
-                          textAlign: TextAlign.left,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            fontSize: 18,
-                          )),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          _b3d,
-                          style: const TextStyle(
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => Listing(),
-                  //   ),
-                  // );
-                },
-              ),
-            ),
+            futureWidget()
           ],
         ),
       ),
     );
+  }
+
+  @override
+  Widget getBody(BuildContext context) {
+    return createMainView(context);
   }
 }

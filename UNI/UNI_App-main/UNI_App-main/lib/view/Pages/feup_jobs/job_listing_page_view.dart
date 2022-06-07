@@ -4,25 +4,21 @@ import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 
 import '../../Widgets/feup_jobs/bullet_list.dart';
+import 'job.dart';
 
 class JobListingView extends StatefulWidget {
+  JobListingView(this.job);
+
+  Job job;
   @override
-  State<StatefulWidget> createState() => JobListingState();
+  State<StatefulWidget> createState() => JobListingState(job);
 }
 
 class JobListingState extends SecondaryPageViewState {
-  final String _title = 'Titulo Posição';
-  final String _departm = 'Departamento';
-  final String _description =
-      "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea";
-  final List<String> _requirements = [
-    'Graduation in Engenharia Informática',
-    '5 anos de experiência em Javascript',
-    'Vontade de Aprender'
-  ];
+  JobListingState(this.job);
 
-  final String _extra =
-      "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better.";
+  Job job;
+
   @override
   Widget getBody(BuildContext context) {
     return Padding(
@@ -32,7 +28,7 @@ class JobListingState extends SecondaryPageViewState {
           Container(
             alignment: Alignment.topLeft,
             child: Text(
-              _title,
+              job.title,
               style: const TextStyle(
                   color: Colors.orangeAccent,
                   fontWeight: FontWeight.w500,
@@ -43,7 +39,7 @@ class JobListingState extends SecondaryPageViewState {
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 5.0),
               child: Text(
-                _departm,
+                job.departm,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
@@ -65,7 +61,7 @@ class JobListingState extends SecondaryPageViewState {
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 15.0),
               child: Text(
-                _description,
+                job.description,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
@@ -86,13 +82,13 @@ class JobListingState extends SecondaryPageViewState {
           Container(
             alignment: Alignment.topLeft,
             padding: const EdgeInsets.only(left: 15.0, top: 10.0),
-            child: UnorderedList(_requirements),
+            child: UnorderedList(job.requirements),
           ),
           Container(
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 20.0),
               child: const Text(
-                "Extra Information:",
+                "Salary:",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
@@ -103,7 +99,7 @@ class JobListingState extends SecondaryPageViewState {
               alignment: Alignment.topLeft,
               padding: const EdgeInsets.only(left: 5.0, top: 15.0, bottom: 30),
               child: Text(
-                _extra,
+                job.salary,
                 style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
