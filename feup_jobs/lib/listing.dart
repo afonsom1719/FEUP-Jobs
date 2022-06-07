@@ -37,16 +37,6 @@ class JobListingWidget extends StatefulWidget {
 }
 
 class _JobListingState extends State<JobListingWidget> {
-  final String _title = 'Titulo Posição';
-  final String _departm = 'Departamento';
-  final String _description =
-      "Para ofertas de emprego ou estágio exclusivamente em Portugal, o IPCA disponibiliza-te a Talent Portugal, com mais de 200 empresas dos melhores empregadores em Portugal Podes pesquisar as empresas de acordo com as tuas preferências, verificar o que te oferecem e depois realizar a candidatura a ofertas de estágio e emprego ou candidatura espontânea";
-  final List<String> _requirements = [
-    'Graduation in Engenharia Informática',
-    '5 anos de experiência em Javascript',
-    'Vontade de Aprender'
-  ];
-
   final String _extra =
       "Your resume is a concise document that describes the work experience, professional skills and education that qualifies you for a job. Some industries and employers may look for more data that helps them understand your personality, ambitions or particular skills. An additional information section on your resume can include activities and pursuits outside of work that help a prospective employer know you better.";
   @override
@@ -62,7 +52,7 @@ class _JobListingState extends State<JobListingWidget> {
               style: const TextStyle(
                   color: Colors.orangeAccent,
                   fontWeight: FontWeight.w500,
-                  fontSize: 50),
+                  fontSize: 35),
             ),
           ),
           Container(
@@ -150,7 +140,7 @@ class _JobListingState extends State<JobListingWidget> {
                                 )));
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 169, 47, 26),
+                    primary: const Color.fromARGB(255, 169, 47, 26),
                   ),
                   child: const Text('Apply'))),
         ]));
