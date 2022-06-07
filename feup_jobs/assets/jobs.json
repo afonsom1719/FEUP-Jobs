@@ -4,11 +4,11 @@
     "title": "Funcionário de Limpezas",
     "departm": "Limpezas, lda",
     "requirements": 
-        ["Graduation in Engenharia E Gestão Industrial",
-        "5 anos de experiência em Javascript",
-        "Vontade de Dirigir"
+        ["2 anos de experiência prévia no ramo",
+        "12º ano de escolaridade",
+        "Boa disposição e vontade de trabalhar"
       ],
-    "description": "Procura-se funcionário de limpezas para FEUP e aefeup,",
+    "description": "Procura-se funcionário de limpezas para FEUP e AEFEUP. Priorizamos trabalhadores com experiência prévia e que estejam dispostos a oferecer os seus serviços em horário a combinar semanalmente.",
     "salary": "700"
   },
   {
@@ -16,35 +16,35 @@
     "title": "Professor de LCOM",
     "departm": "L.EIC",
     "requirements": 
-        ["Graduation in Engenharia E Gestão Industrial",
-        "5 anos de experiência em Javascript",
-        "Vontade de Dirigir"
+        ["Graduation in Engenharia Informática e Computação",
+        "10 anos de experiência em linguagem C",
+        "5 anos de experiência em desenvolvimento de embedded systems"
       ],
-    "description": "Procura-se professor para ocupar vaga como regente de LCOM",
+    "description": "Procura-se professor experiente para ocupar vaga como regente de LCOM. A aceitação no cargo está sujeita a um período de experiência de 2 semanas, em que os candidatos serão avaliados  ereceberão a formação complementar adequada.",
     "salary": "2000"
   },
   {
     "id": "2",
-    "title": "Diretor de Curso",
+    "title": "Diretor de Curso DE L.EGI",
     "departm": "L.EGI",
     "requirements": 
         ["Graduation in Engenharia E Gestão Industrial",
-        "5 anos de experiência em Javascript",
-        "Vontade de Dirigir"
+        "5 anos de experiência prévia em cargos administrativos",
+        "Sentido de liderança"
       ],
-    "description": "Procura- se diretor de curso para L.EGI",
+    "description": "Procura-se diretor de curso para o ciclo de estudos de Lienciatura em Engenharia e Gestão Industrial. Preferência para professores e ex-professores da FEUP, com ou sem experiência pévia em cargos similares.",  
     "salary": "4000"
-  },
+  }, 
   {
     "id": "3",
     "title": "Responsável do ano curricular do curso de Eng. Civil",
     "departm": "L.EGI",
     "requirements": 
-        ["Graduation in Engenharia E Gestão Industrial",
-        "5 anos de experiência em Javascript",
-        "Vontade de Dirigir"
+        ["Ser estudante da Licenciatura em Engenharia Civil",
+        "É valorizada experiência em cargos administrativos",
+        "Sentido de liderança"
       ],
-    "description": "Procura-se aluno interessado em organizar e ouvir todos os pedidos e assuntos relacionados ao ano 3 do curso L.EC 21/22",
-    "salary": "150"
+    "description": "Procura-se aluno interessado em organizar e ouvir todos os pedidos e assuntos relacionados ao ano 3 do curso de Licenciatura em Engenharia Civil para o ano letivo 2021/2022. No caso de haver mais do que um candidato a esta posição, a escolha será feita através de eleição em data a determinar.",
+    "salary": "150" 
   }
 ]

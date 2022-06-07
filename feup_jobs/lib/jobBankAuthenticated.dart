@@ -12,7 +12,7 @@ import 'package:feup_jobs/filterScreen.dart';
 
 Future<List<Job>> _readJson() async {
   List<Job> _items = [];
-  final String response = await rootBundle.loadString('assets/jobs.json');
+  final String response = await rootBundle.loadString('assets/jobBank.json');
   final List<dynamic> data = await json.decode(response);
 
   for (dynamic it in data) {

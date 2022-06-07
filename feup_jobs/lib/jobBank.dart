@@ -10,7 +10,7 @@ import 'package:flutter/services.dart';
 
 Future<List<Job>> _readJson() async {
   List<Job> _items = [];
-  final String response = await rootBundle.loadString('assets/jobBank.json');
+  final String response = await rootBundle.loadString('assets/jobs.json');
   final List<dynamic> data = await json.decode(response);
 
   for (dynamic it in data) {
@@ -113,7 +113,7 @@ class _ListPageState extends State<Bank> {
             Container(
               alignment: Alignment.topLeft,
               child: const Text(
-                "FEUP\'s Job Bank",
+                "Jobs at FEUP",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,

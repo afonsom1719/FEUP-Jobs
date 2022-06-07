@@ -1,8 +1,6 @@
 import 'package:feup_jobs/jobBank.dart';
 import 'package:flutter/material.dart';
-import 'Components/NavigationBar.dart';
 import 'login.dart';
-import 'listing.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,13 +9,13 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
+      // ignore: unnecessary_const
       home: Scaffold(
-        appBar: CustomAppBar(),
-        drawer: CustomDrawer(),
-        body: HomeOptionsWidget(),
+        appBar: AppBar(backgroundColor: const Color.fromARGB(255, 169, 47, 26)),
+        body: const HomeOptionsWidget(),
       ),
     );
   }
@@ -65,7 +63,7 @@ class _HomeOptionsWidget extends State<HomeOptionsWidget> {
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 169, 47, 26),
               ),
-              key: Key('feupsjobbank'),
+              key: const Key('feupsjobbank'),
               child: const Text("FEUP's Job Bank"),
             ),
           ),
